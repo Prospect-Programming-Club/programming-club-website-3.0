@@ -60,14 +60,20 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #ffffff;
-  --bs-body-bg: #212529;
+  --bs-body-color: black;
+  --bs-body-bg: white;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/*toggle dark/light mode*/
+.dark-mode {
+  background-color: black;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -236,11 +242,11 @@ sup {
 }
 
 a {
-  color: white;
+  color: blue;
   text-decoration: none;
 }
 a:hover {
-  color: ;
+  color: red;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -283,8 +289,8 @@ a > code {
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
-  color: #fff;
-  background-color: #212529;
+  color: black;
+  background-color: white;
 }
 kbd kbd {
   padding: 0;
@@ -622,7 +628,7 @@ progress {
 
 .figure-caption {
   font-size: 0.875em;
-  color: #6c757d;
+  color: white;
 }
 
 .container,
