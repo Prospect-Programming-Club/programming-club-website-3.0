@@ -70,8 +70,6 @@
   box-sizing: border-box;
 }
 
-<<<<<<< Updated upstream
-=======
 /*toggle dark/light mode*/
 .dark-mode {
   background-color: black;
@@ -83,7 +81,6 @@
   color: black;
 }
 
->>>>>>> Stashed changes
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -254,7 +251,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: ;
+  color: red;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {

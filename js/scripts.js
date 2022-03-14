@@ -38,6 +38,6 @@ function toggleDark() {
 function toggleLight() {
     var element = document.body;
     element.classList.toggle("light-mode");
-    document.getElementById("lightButton").style.visibility = "hidden";
     document.getElementById("darkButton").style.visibility = "visible";
+    document.getElementById("lightButton").style.visibility = "hidden";`` 
 }
