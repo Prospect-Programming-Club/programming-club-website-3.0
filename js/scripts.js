@@ -27,8 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
-<<<<<<< Updated upstream
-=======
 
 function toggleDark() {
     var element = document.body;
@@ -43,4 +41,3 @@ function toggleLight() {
     document.getElementById("lightButton").style.visibility = "hidden";
     document.getElementById("darkButton").style.visibility = "visible";
 }
->>>>>>> Stashed changes
