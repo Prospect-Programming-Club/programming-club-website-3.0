@@ -27,3 +27,20 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
+<<<<<<< Updated upstream
+=======
+
+function toggleDark() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    document.getElementById("darkButton").style.visibility = "hidden";
+    document.getElementById("lightButton").style.visibility = "visible";
+}
+
+function toggleLight() {
+    var element = document.body;
+    element.classList.toggle("light-mode");
+    document.getElementById("lightButton").style.visibility = "hidden";
+    document.getElementById("darkButton").style.visibility = "visible";
+}
+>>>>>>> Stashed changes

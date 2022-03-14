@@ -70,6 +70,20 @@
   box-sizing: border-box;
 }
 
+<<<<<<< Updated upstream
+=======
+/*toggle dark/light mode*/
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+>>>>>>> Stashed changes
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
