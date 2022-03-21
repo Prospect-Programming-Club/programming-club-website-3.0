@@ -76,6 +76,25 @@
   color: white;
 }
 
+.projectBoxes {
+  background-color: #66aab8;
+	width:250px;
+	height:300px;
+	margin:15px;
+	padding:50px;
+  border-radius: 25px;
+}
+
+.projectBoxes p{
+	white-space:pre;
+	font-size:smaller;
+	font-family:monospace;
+}
+
+.projectBoxes h2 {
+  padding: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

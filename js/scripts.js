@@ -32,3 +32,14 @@ function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
+
+function reveal1() {
+    var div = document.getElementById("projects1");
+    div.style.display = div.style.display == "none" ? "block" : "none";
+}
+
+function reveal2() {
+    var div = document.getElementById("projects2");
+    div.style.display = div.style.display == "none" ? "block" : "none";
+}
+
