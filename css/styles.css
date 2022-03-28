@@ -83,7 +83,9 @@
 	margin:15px;
 	padding:50px;
   border-radius: 25px;
+  float: left;
 }
+
 
 .projectBoxes p{
 	white-space:pre;
@@ -92,6 +94,19 @@
 }
 
 .projectBoxes h2 {
+  padding: 5px;
+}
+
+.divbox {
+  float: left;
+  margin: 3% 6%;
+  width: 150;
+  height: 150;
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+}
+ h2 {
   padding: 5px;
 }
 
