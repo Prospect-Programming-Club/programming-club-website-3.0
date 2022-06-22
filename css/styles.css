@@ -278,7 +278,7 @@ sup {
 }
 
 a {
-  color: blue;
+  color: #212529;
   text-decoration: none;
 }
 a:hover {
@@ -11269,12 +11269,10 @@ header.masthead .site-heading .h1 {
   font-size: 1.875rem;
   margin-top: 1.875rem;
   margin-bottom: 0.625rem;
-  color: lightskyblue;
 }
 .post-preview > a > .post-subtitle {
   font-weight: 300;
   margin-bottom: 0.625rem;
-  color: lightskyblue;
 }
 .post-preview > .post-meta {
   font-size: 1.125rem;
