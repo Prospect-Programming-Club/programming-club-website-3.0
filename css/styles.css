@@ -337,6 +337,14 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
+/* 
+.icon {
+  text-align: center;
+} */
+
+span {
+  text-align: center;
+}
 
 img,
 svg {
@@ -2784,6 +2792,12 @@ textarea.form-control-lg {
 }
 .input-group .btn:focus {
   z-index: 3;
+}
+
+.icon {
+  right: 200px; 
+  transform: translate(210px, 0px);
+  float: left;
 }
 
 .input-group-text {
@@ -11179,6 +11193,9 @@ header.masthead:before {
   background-color: #212529;
   opacity: 0.5;
 }
+
+
+
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
