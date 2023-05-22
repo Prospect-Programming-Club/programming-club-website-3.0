@@ -96,7 +96,7 @@
                                 ];
                     
                                 let key = document.getElementById("alumni_search").value;
-                                let results = alumniInfo.filter(person => person.name.includes(key.toUpperCase())).sort((person1, person2) => person1.name.compareTo(person2.name) > 0);
+                                let results = alumniInfo.filter(person => person.name.includes(key.toUpperCase()));
                                 let toString = "";
 
                                 for (let i = 0; i < results.length; i++) {
