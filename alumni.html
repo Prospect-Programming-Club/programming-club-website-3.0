@@ -87,16 +87,16 @@
                                     new Alumni("ROYCE LI", "Member", "2021-22", "SJSU", "B.S. Computer Science", "-"), 
                                     new Alumni("BRIAN HUYNH", "Member", "2021-22", "UC Merced", "B.S. Computer Science & Engineering", "-",), 
                                     new Alumni("DEREK HUYNH", "Member", "2021-22", "SJSU", "B.S. Computer Science", "-"),
-                                    new Alumni("CLEMENT BOITEUX", "Secretary", "2020-22", "UC Santa Barbara", "B.S. Electrical Engineering", "ezrabridger27@gmail.com"),
-                                    new Alumni("GAURAV DHARMADHIKARI", "President", "2020-22", "SJSU", "B.S. Computer Engineering", "gauravdharmadhikari2@gmail.com"),
-                                    new Alumni("SHAMIK KARKHANIS", "Treasurer", "2020-22", "RPI", "B.S. Computer Science", "shamikk2005@gmail.com"),
-                                    new Alumni("ABHINEET PAL", "Member", "2021-22", "UC Davis", "B.S. Computer Engineering", "aip_embox@thepal.org"),
-                                    new Alumni("MARK SHEN", "Member", "2021-22", "De Anza College", "A.S. Computer Science", "markshen00@gmail.com"),
+                                    new Alumni("CLEMENT BOITEUX", "Secretary", "2020-23", "UC Santa Barbara", "B.S. Electrical Engineering", "ezrabridger27@gmail.com"),
+                                    new Alumni("GAURAV DHARMADHIKARI", "President", "2020-23", "SJSU", "B.S. Computer Engineering", "gauravdharmadhikari2@gmail.com"),
+                                    new Alumni("SHAMIK KARKHANIS", "Treasurer", "2020-23", "RPI", "B.S. Computer Science", "shamikk2005@gmail.com"),
+                                    new Alumni("ABHINEET PAL", "Member", "2021-23", "UC Davis", "B.S. Computer Engineering", "aip_embox@thepal.org"),
+                                    new Alumni("MARK SHEN", "Member", "2021-23", "De Anza College", "A.S. Computer Science", "markshen00@gmail.com"),
                                     new Alumni("MAHARISHI RAJARETHENAM", "Member", "2020-21", "UC Irvine", "B.S. Biology", "-")
                                 ];
                     
                                 let key = document.getElementById("alumni_search").value;
-                                let results = alumniInfo.filter(person => person.name.includes(key.toUpperCase()));
+                                let results = alumniInfo.filter(person => person.name.includes(key.toUpperCase())).sort((person1, person2) => person1.name.compareTo(person2.name) > 0);
                                 let toString = "";
 
                                 for (let i = 0; i < results.length; i++) {
