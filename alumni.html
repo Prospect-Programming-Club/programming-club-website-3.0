@@ -110,7 +110,7 @@
                                 let key = document.getElementById("alumni_search").value;
                                 let filter = document.getElementById("filter").value;
 
-                                let results = alumniInfo.filter(person => person.name.toUpperCase().includes(key.toUpperCase()));
+                                let results = alumniInfo.filter(person => person.toString().toUpperCase().includes(key.toUpperCase()));
 
                                 switch (filter) {
                                     case "name":
