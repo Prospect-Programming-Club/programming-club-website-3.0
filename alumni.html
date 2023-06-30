@@ -32,6 +32,7 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="showcase.html">Showcase</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="alumni.html">Alumni</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resources.html">Resources</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,6 +58,14 @@
                         <h4>Alumni Directory</h4>
                         <p>Want to connect with our alumni? Type in their name to find their contact information!</p>
 
+                        <select name="filter" id="filter">
+                            <option value="default">Choose Option</option>
+                            <option value="name">Name</option>
+                            <option value="position">Position</option>
+                            <option value="year">Graduation Year</option>
+                            <option value="school">School</option>
+                            <option value="major">Major</option>
+                        </select>
                         <input type="text" name="name" id="alumni_search" size="15">
                         <button type="submit" id="search_button" onclick="getAlumniInfo()">Submit</button> <br>
                     
@@ -67,36 +76,62 @@
                     
                                 class Alumni {
                     
-                                    constructor(name, position, years, school, major, email) {
+                                    constructor(name, position, year, school, major, email) {
                                         this.name = name;
                                         this.position = position;
-                                        this.years = years;
+                                        this.year = year;
                                         this.school = school;
                                         this.major = major;
                                         this.email = email;
                                     }
                     
                                     toString() {
-                                        return `Name: ${this.name} | Position: ${this.position} | Years: ${this.years} | School: ${this.school} | Major: ${this.major} | Email: ${this.email}`;
+                                        return `Name: ${this.name} | Position: ${this.position} | Graduation Year: ${this.year} | School: ${this.school} | Major: ${this.major} | Email: ${this.email}`;
                                     }
                                 }
                     
                                 const alumniInfo = [
-                                    new Alumni("DANIEL TSAI", "President", "2020-21", "UCLA", "B.S. Computer Science", "leinazheshensi@gmail.com"), 
-                                    new Alumni("GRADY WHELAN", "Vice President", "2020-21", "Purdue", "B.S. Computer Science", "grady.whelan@gmail.com"), 
-                                    new Alumni("ROYCE LI", "Member", "2021-22", "SJSU", "B.S. Computer Science", "-"), 
-                                    new Alumni("BRIAN HUYNH", "Member", "2021-22", "UC Merced", "B.S. Computer Science & Engineering", "-",), 
-                                    new Alumni("DEREK HUYNH", "Member", "2021-22", "SJSU", "B.S. Computer Science", "-"),
-                                    new Alumni("CLEMENT BOITEUX", "Secretary", "2020-23", "UC Santa Barbara", "B.S. Electrical Engineering", "ezrabridger27@gmail.com"),
-                                    new Alumni("GAURAV DHARMADHIKARI", "President", "2020-23", "SJSU", "B.S. Computer Engineering", "gauravdharmadhikari2@gmail.com"),
-                                    new Alumni("SHAMIK KARKHANIS", "Treasurer", "2020-23", "RPI", "B.S. Computer Science", "shamikk2005@gmail.com"),
-                                    new Alumni("ABHINEET PAL", "Member", "2021-23", "UC Davis", "B.S. Computer Engineering", "aip_embox@thepal.org"),
-                                    new Alumni("MARK SHEN", "Member", "2021-23", "De Anza College", "A.S. Computer Science", "markshen00@gmail.com"),
-                                    new Alumni("MAHARISHI RAJARETHENAM", "Member", "2020-21", "UC Irvine", "B.S. Biology", "-")
+                                    new Alumni("Daniel Tsai", "President", "2021", "UCLA", "Computer Science", "leinazheshensi@gmail.com"), 
+                                    new Alumni("Grady Whelan", "Vice President", "2021", "Purdue", "Computer Science", "grady.whelan@gmail.com"), 
+                                    new Alumni("Royce Li", "Member", "2022", "SJSU", "Computer Science", "-"), 
+                                    new Alumni("Brian Huynh", "Member", "2022", "UC Merced", "Computer Science & Engineering", "-",), 
+                                    new Alumni("Derek Huynh", "Member", "2022", "SJSU", "Computer Science", "-"),
+                                    new Alumni("Clement Boiteux", "Secretary", "2023", "UC Santa Barbara", "Electrical Engineering", "ezrabridger27@gmail.com"),
+                                    new Alumni("Gaurav Dharmadhikari", "President", "2023", "SJSU", "Computer Engineering", "gauravdharmadhikari2@gmail.com"),
+                                    new Alumni("Shamik Karkhanis", "Treasurer", "2023", "RPI", "Computer Science", "shamikk2005@gmail.com"),
+                                    new Alumni("Abhineet Pal", "Member", "2023", "UC Davis", "Computer Engineering", "aip_embox@thepal.org"),
+                                    new Alumni("Mark Shen", "Member", "2023", "De Anza College", "Computer Science", "markshen00@gmail.com"),
+                                    new Alumni("Maharishi Rajarethenam", "Member", "2023", "UC Irvine", "Biology", "-"),
+                                    new Alumni("Joshua Lee", "Member", "2023", "CU Boulder", "Computer Science", "-"),
+                                    new Alumni("Daniel Carmona Perez", "Member", "2023", "Mission College", "-", "-"),
+                                    new Alumni("Kenji Hongo", "Member", "2023", "University of San Francisco", "Computer Science", "-")
                                 ];
                     
                                 let key = document.getElementById("alumni_search").value;
-                                let results = alumniInfo.filter(person => person.name.includes(key.toUpperCase()));
+                                let filter = document.getElementById("filter").value;
+
+                                let results = alumniInfo.filter(person => person.name.toUpperCase().includes(key.toUpperCase()));
+
+                                switch (filter) {
+                                    case "name":
+                                        results = results.sort((a, b) => a.name.localeCompare(b.name));
+                                        break;
+                                    case "position":
+                                        results = results.sort((a, b) => a.position.localeCompare(b.position));
+                                        break;
+                                    case "school":
+                                        results = results.sort((a, b) => a.school.localeCompare(b.school));
+                                        break;
+                                    case "major":
+                                        results = results.sort((a, b) => a.major.localeCompare(b.major));
+                                        break;
+                                    case "year":
+                                        results = results.sort((a, b) => a.year.localeCompare(b.year));
+                                        break;
+                                    case "default":
+                                        break;
+                                }
+
                                 let toString = "";
 
                                 for (let i = 0; i < results.length; i++) {
